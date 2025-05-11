@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 1s ease-out',
+            bounceIn: 'bounceIn 0.8s ease-out',
+            slideInUp: 'slideInUp 1s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+            bounceIn: {
+              '0%': { transform: 'scale(0.95)', opacity: 0 },
+              '100%': { transform: 'scale(1)', opacity: 1 },
+            },
+            slideInUp: {
+              '0%': { transform: 'translateY(20px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 },
+            },
+          },
+        },
+      },
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 800, once: true });
+    });
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-white shadow p-4 sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">My Portfolio</h1>
+      <nav class="space-x-6 text-sm">
+        <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
+        <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="py-24 bg-gradient-to-r from-blue-100 to-blue-50 text-center" data-aos="fade-up">
+    <h2 class="text-5xl font-extrabold mb-4">Hi, I'm Sergio</h2>
+    <p class="text-xl text-gray-700">Frontend Developer | JavaScript & Angular Specialist</p>
+  </section>
+
+  <section id="projects" class="max-w-6xl mx-auto py-20 px-6">
+    <h3 class="text-3xl font-semibold mb-12 text-center" data-aos="fade-up">Projects</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300" data-aos="zoom-in">
+        <h4 class="text-xl font-bold mb-2">Project Title</h4>
+        <p class="text-gray-600 mb-4">Brief description of the project and the technologies used.</p>
+        <a href="#" class="text-blue-600 hover:underline">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="bg-white py-20 text-center" data-aos="fade-up">
+    <h3 class="text-3xl font-semibold mb-10">Skills</h3>
+    <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+      <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow text-lg" data-aos="zoom-in">HTML</span>
+      <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow text-lg" data-aos="zoom-in" data-aos-delay="100">CSS</span>
+      <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow text-lg" data-aos="zoom-in" data-aos-delay="200">JavaScript</span>
+      <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow text-lg" data-aos="zoom-in" data-aos-delay="300">Angular</span>
+      <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow text-lg" data-aos="zoom-in" data-aos-delay="400">TypeScript</span>
+      <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow text-lg" data-aos="zoom-in" data-aos-delay="500">TailwindCSS</span>
+      <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow text-lg" data-aos="zoom-in" data-aos-delay="600">Git</span>
+      <span class="bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow text-lg" data-aos="zoom-in" data-aos-delay="700">Node.js</span>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-gray-100 py-20 text-center" data-aos="fade-up">
+    <h3 class="text-3xl font-semibold mb-6">Let's Connect</h3>
+    <p class="text-gray-700 mb-8">Feel free to reach out for collaborations or just a friendly hello!</p>
+    <a href="mailto:you@example.com" class="inline-block bg-blue-600 text-white py-3 px-8 rounded-full shadow hover:bg-blue-700 transition-transform transform hover:scale-105">
+      Say Hello
+    </a>
+  </section>
+
+  <footer class="bg-white text-center py-6 text-sm text-gray-500">
+    © 2025 [Your Name]. All rights reserved.
+  </footer>
+</body>
+</html>
